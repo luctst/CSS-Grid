@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Grid : Implicit rows</title>
+    <style media="screen">
+    html,body {
+      background: #ffeead;
+    }
+    div.container > div > p {
+      text-align: center;
+    }
+    div.container > div:nth-child(1n) {
+      background: #96ceb4;
+    }
+    div.container > div:nth-child(3n) {
+      background: #88d8b0;
+    }
+    div.container > div:nth-child(2n) {
+      background: #ff6f69;
+    }
+    div.container > div:nth-child(4n) {
+      background: #ffcc5c;
+    }
+    div.container {
+      display: grid;
+      grid-gap: 5px;
+      grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+      grid-auto-rows: 100px; /*grid-auto-rows allows us to define how many height our rows that
+      we don't defined in our grid should have, it's useful when we don't know how many rows our
+      grid will contain. We can even define just this instructions if we don't know how many
+      rows we need*/
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div><p>1</p></div>
+      <div><p>2</p></div>
+      <div><p>3</p></div>
+      <div><p>4</p></div>
+      <div><p>5</p></div>
+      <div><p>6</p></div>
+      <div><p>7</p></div>
+      <div><p>8</p></div>
+      <div><p>9</p></div>
+      <div><p>10</p></div>
+      <div><p>11</p></div>
+      <div><p>12</p></div>
+    </div>
+  </body>
+</html>
