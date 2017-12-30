@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Grid - Autofit and minmax()</title>
+    <style media="screen">
+    html,body {
+      background: #ffeead;
+    }
+    div.container > div > p,section.container > div > p {
+      text-align: center;
+    }
+    div.container > div:nth-child(1n),section.container > div:nth-child(1n) {
+      background: #96ceb4;
+    }
+    div.container > div:nth-child(3n),section.container > div:nth-child(3n) {
+      background: #88d8b0;
+    }
+    div.container > div:nth-child(2n),section.container > div:nth-child(2n) {
+      background: #ff6f69;
+    }
+    div.container > div:nth-child(4n),section.container > div:nth-child(4n) {
+      background: #ffcc5c;
+    }
+    div.container {
+      display: grid;
+      grid-gap: 5px;
+      grid-template: repeat(2,150px) / repeat(auto-fit,200px); /*auto-fit create as many as
+      possible columns as long the columns are = 200px auto-fit create a column but if
+      one column is < 200px so auto-fit delete one column, each column can only be = at 200px so
+      sometimes you have white space because there is not enough place for an other column*/
+    }
+    section.container {
+      margin-top: 50px;
+      display: grid;
+      grid-gap: 5px;
+      grid-template: repeat(2,150px) / repeat(auto-fit,minmax(200px,1fr)); /*This instructions says
+      create as many as possible columns with a min-width of 200px and a max-width of 1fr. So if a
+      column is less than 200px delete one column but if a column is more than 200px so take 1fr
+      so take 1 space available in the container*/
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div><p>1</p></div>
+      <div><p>2</p></div>
+      <div><p>3</p></div>
+      <div><p>4</p></div>
+      <div><p>5</p></div>
+      <div><p>6</p></div>
+      <div><p>7</p></div>
+      <div><p>8</p></div>
+      <div><p>9</p></div>
+      <div><p>10</p></div>
+      <div><p>11</p></div>
+      <div><p>12</p></div>
+    </div>
+    <section class="container">
+      <div><p>13</p></div>
+      <div><p>14</p></div>
+      <div><p>15</p></div>
+      <div><p>16</p></div>
+      <div><p>17</p></div>
+      <div><p>18</p></div>
+      <div><p>19</p></div>
+      <div><p>20</p></div>
+      <div><p>21</p></div>
+      <div><p>22</p></div>
+      <div><p>23</p></div>
+      <div><p>24</p></div>
+    </section>
+  </body>
+</html>
