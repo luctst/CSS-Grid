@@ -1,0 +1,42 @@
+html,body {
+  background: #ffeead;
+}
+div.container > div > p {
+  text-align: center;
+}
+div.container > div:nth-child(1n) {
+  background: #96ceb4
+}
+div.container > div:nth-child(3n) {
+  background: #88d8b0;
+}
+div.container > div:nth-child(2n) {
+  background: #ff6f69;
+}
+div.container > div:nth-child(4n) {
+  background: #ffcc5c;
+}
+div.container {
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 40px auto 40px;
+}
+div.header {
+  grid-column: 2 / -1; /*grid-column is a shorthand for grid-column-start and grid-column-end
+  the first parameter define where the element should start and the second where he should end
+  on the column lines.*/
+}
+div.menu {
+  grid-row: 1 / -1; /*grid-row is a shorthand for grid-row-start and grid-row-end
+  the first parameter define where the element should start and the second where he should end
+  on the row lines.*/
+}
+div.content {
+  grid-column: 2 / -1; /*The content element start as column line 2 and finish at the last
+  column lines*/
+}
+div.footer {
+  grid-column: 2 / -1; /*The -1 parameter define the last column lines it's helpful when you
+  don't know exactly how many columns lines you have in your grid*/
+}

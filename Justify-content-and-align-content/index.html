@@ -3,35 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>CCS Grid - Justify-content and Align-content</title>
-    <style media="screen">
-      html,body {
-        background: #ffeead;
-      }
-      div.container > div > p {
-        text-align: center;
-      }
-      div.container > div:nth-child(1n) {
-        background: #96ceb4;
-      }
-      div.container > div:nth-child(3n) {
-        background: #88d8b0;
-      }
-      div.container > div:nth-child(2n) {
-        background: #ff6f69;
-      }
-      div.container > div:nth-child(4n) {
-        background: #ffcc5c;
-      }
-      div.container {
-        border: 2px solid #333;
-        display: grid;
-        min-height: 100vh;
-        grid-gap: 5px;
-        grid-template: repeat(2,100px) / repeat(3,100px);
-        justify-content: space-around;/*Justify-content place the childs of our element on the X(Horizontal)*/
-        align-content: space-evenly;/*align-content place the childs of our element on the Y(Vertical)*/
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">

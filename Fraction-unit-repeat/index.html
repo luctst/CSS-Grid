@@ -3,49 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>CSS Grid - Fraction unit and repeat function</title>
-    <style media="screen">
-    html,body {
-      background: #ffeead;
-    }
-    div.container > div > p,section.container > div > p,section.container-fluid > div > p {
-      text-align: center;
-    }
-    div.container > div:nth-child(1n),section.container > div:nth-child(1n),section.container-fluid > div:nth-child(1n) {
-      background: #96ceb4;
-    }
-    div.container > div:nth-child(3n),section.container > div:nth-child(3n),section.container-fluid > div:nth-child(3n) {
-      background: #88d8b0;
-    }
-    div.container > div:nth-child(2n),section.container > div:nth-child(2n),section.container-fluid > div:nth-child(2n) {
-      background: #ff6f69;
-    }
-    div.container > div:nth-child(4n),section.container > div:nth-child(4n),section.container-fluid > div:nth-child(4n) {
-      background: #ffcc5c;
-    }
-    div.container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr; /*The fr unit divide the space in fractional unit, for
-      example here our container is divide in 3 columns, so 1fr will take 1 part of the available
-      space*/
-      grid-gap: 3px;
-    }
-    section.container {
-      margin-top: 50px;
-      display: grid;
-      grid-template-columns: repeat(3,1fr); /*The repeat function is use when you have a lot of
-      columns, the first parameter is the number of columns and the second is their width, unit*/
-      grid-template-rows: repeat(2,50px);
-      grid-gap: 3px;
-    }
-    section.container-fluid {
-      margin-top: 50px;
-      display: grid;
-      grid-template: repeat(2,50px) / repeat(3,1fr); /*grid-template is a shorthand for
-      grid-template-columns and grid-template-rows the first instructions define row and the
-      second define columns*/
-      grid-gap: 3px;
-    }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">

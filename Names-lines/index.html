@@ -3,48 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>CSS Grid - Named lines</title>
-    <style media="screen">
-      html,body {
-        background: #ffeead;
-      }
-      div.container > div > p {
-        text-align: center;
-      }
-      div.container > div:nth-child(1n) {
-        background: #96ceb4;
-      }
-      div.container > div:nth-child(3n) {
-        background: #88d8b0;
-      }
-      div.container > div:nth-child(2n) {
-        background: #ff6f69;
-      }
-      div.container > div:nth-child(4n) {
-        background: #ffcc5c;
-      }
-      div.container {
-        display: grid;
-        grid-gap: 5px;
-        grid-template: 40px 200px 40px / [main-start] 1fr [content-start] 5fr [content-end main-end];/*We have
-        the possibilities to add some names to our columns and rows. So here we have 3 columns and we give a
-        names, our 1 column name is main-start, our 2 columns name is content-start and the 3 column name is content-end
-        and main-end(it's possible to give many names to our columns).*/
-      }
-      div.header {
-        grid-column: main-start / main-end;/*Our div.header start as the first column(main-start) and finish at
-        the last column(main-end)*/
-      }
-      div.menu {
-        grid-row: 2 / 2;
-      }
-      div.content {
-        grid-column: content-start / content-end;/*Our div.content start as the second column(content-start) and
-        finish at the last column(content-end)*/
-      }
-      div.footer {
-        grid-column: 1 / -1;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">

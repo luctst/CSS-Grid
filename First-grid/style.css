@@ -1,0 +1,28 @@
+html,body {
+  background: #ffeead;
+}
+div > p {
+  text-align: center;
+}
+div.container > div:nth-child(1n) {
+  background: #96ceb4;
+}
+div.container > div:nth-child(3n) {
+  background: #88d8b0;
+}
+div.container > div:nth-child(2n) {
+  background: #ff6f69;
+}
+div.container > div:nth-child(4n) {
+  background: #ffcc5c;
+}
+div.container {
+  min-height: 100vh;
+  display: grid; /*Add grid to our container*/
+  grid-template-columns: 100px auto 100px; /*Define how many columns and what is their width
+  in our container can take (px,%,em,fr,auto);*/
+  grid-template-rows: 50px 50px 50px; /*Define how many rows and what is their width
+  in our container can take (px,%,em,fr,auto);*/
+  grid-gap: 33px; /*Define gap for the column this instructions define gap
+  horizontally and vertically*/
+}

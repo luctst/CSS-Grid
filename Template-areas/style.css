@@ -1,0 +1,44 @@
+html,body {
+  background: #ffeead;
+}
+div.container > div > p {
+  text-align: center;
+}
+div.container > div:nth-child(1n) {
+  background: #96ceb4;
+}
+div.container > div:nth-child(3n) {
+  background: #88d8b0;
+}
+div.container > div:nth-child(2n) {
+  background: #ff6f69;
+}
+div.container > div:nth-child(4n) {
+  background: #ffcc5c;
+}
+div.container {
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 40px auto 40px;
+  grid-template-areas:
+  ". . h h h h h h h h h ."
+  "m c c c c c c c c c c c"
+  ". . f f f f f f f f f ."; /*This instructions alow you to create the layout directly in
+  the instructions, you should write exactly the same number of columns and lines or it
+  doesn't work*/
+}
+div.header {
+  grid-area: h; /*The grid-area instructions create a conexion between the element and the
+  grid-template-areas, for example here the element header represent now the h part in the
+  grid-template-ares*/
+}
+div.menu {
+  grid-area: m;
+}
+div.content {
+  grid-area: c;
+}
+div.footer {
+  grid-area: f;
+}
