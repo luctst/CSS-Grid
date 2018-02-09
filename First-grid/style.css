@@ -1,23 +1,19 @@
-html,body {
-  background: #ffeead;
-}
 div > p {
   text-align: center;
 }
-div.container > div:nth-child(1n) {
+div.wrapper > div:nth-child(1n) {
   background: #96ceb4;
 }
-div.container > div:nth-child(3n) {
+div.wrapper > div:nth-child(3n) {
   background: #88d8b0;
 }
-div.container > div:nth-child(2n) {
+div.wrapper > div:nth-child(2n) {
   background: #ff6f69;
 }
-div.container > div:nth-child(4n) {
+div.wrapper > div:nth-child(4n) {
   background: #ffcc5c;
 }
-div.container {
-  min-height: 100vh;
+div.wrapper {
   display: grid; /*Add grid to our container*/
   grid-template-columns: 100px auto 100px; /*Define how many columns and what is their width
   in our container can take (px,%,em,fr,auto);*/
