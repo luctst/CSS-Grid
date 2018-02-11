@@ -3,32 +3,72 @@
   <head>
     <meta charset="utf-8">
     <title>CSS Grid - Fraction unit and repeat function</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
-      <div><p>1</p></div>
-      <div><p>2</p></div>
-      <div><p>3</p></div>
-      <div><p>4</p></div>
-      <div><p>5</p></div>
-      <div><p>6</p></div>
+      <div class="row">
+        <div class="col-12">
+          <h1 class="mt-4 mb-4 text-center">Fraction unit and repeat</h1>
+          <h2 class="mt-4 mb-4">New unit fr</h2>
+        </div>
+      </div>
+        <div class="wrapper">
+          <div><p>1</p></div>
+          <div><p>2</p></div>
+          <div><p>3</p></div>
+          <div><p>4</p></div>
+          <div><p>5</p></div>
+          <div><p>6</p></div>
+        </div>
+        <ol class="list-group mt-4 mb-4">
+          <li class="list-group-item">We create our <code>grid-template-columns</code> with the new unit by adding
+          <code>fr</code> to our columns.</li>
+          <li class="list-group-item">The <code>fr</code> unit divide the space in fractional unit, for example
+          here our container is divide in 3 columns, so <code>1fr</code> will take 1 part of the available space.</li>
+          <li class="list-group-item">The <code>fr</code> unit work also with <code>grid-template-rows</code>.</li>
+        </ol>
+        <h2 class="mt-4 mb-4">Repeat function</h2>
+        <div class="wrapperRepeat">
+          <div><p>7</p></div>
+          <div><p>8</p></div>
+          <div><p>9</p></div>
+          <div><p>10</p></div>
+          <div><p>11</p></div>
+          <div><p>12</p></div>
+        </div>
+        <ol class="mt-4 mb-4 list-group">
+          <li class="list-group-item">By default we can in <code>grid-template-rows</code> and
+          <code>grid-template-columns</code> simply add a columns or a row by adding a new parameter with a unit
+          like this, <code>grid-template-columns: 1fr 1fr 1fr</code>, but there is a better way to do that.</li>
+          <li class="list-group-item">If all your columns will be the same you can use the <code>repeat()</code>
+          function who can help to avoid DRY.</li>
+          <li class="list-group-item">The <code>repeat()</code> function need two parameters, the first parameter
+          will be the number of columns you need, the second parameter is the size of yours columns.</li>
+          <li class="list-group-item">So in our container above it would be like that,
+          <code>grid-template-columns: repeat(3,1fr)</code>.</li>
+          <li class="list-group-item">This method can be very helpful if you have a lot of columns with the same size,
+          work also with <code>grid-template-rows</code>.</li>
+        </ol>
+        <h2 class="mt-4 mb-4">Grid-template solution</h2>
+        <div class="wrapperShorthand">
+          <div><p>13</p></div>
+          <div><p>14</p></div>
+          <div><p>15</p></div>
+          <div><p>16</p></div>
+          <div><p>17</p></div>
+          <div><p>18</p></div>
+        </div>
+        <ol class="mt-4 mb-4 list-group">
+          <li class="list-group-item">Until now for create columns and rows we used this method
+          <code>grid-template-columns</code> and <code>grid-template-rows</code> but there is a better solution.</li>
+          <li class="list-group-item">The <code>grid-template</code> method is a shorthand for grid-template-columns
+          and grid-template-rows the first instructions define row and the second define columns.</li>
+          <li class="list-group-item">In your example above it could be like that,
+          <code>grid-template: repeat(2,50px) / repeat(3,1fr)</code>.</li>
+          <li class="list-group-item">We can also combine with <code>repeat()</code> function.</li>
+        </ol>
     </div>
-    <section class="container">
-      <div><p>7</p></div>
-      <div><p>8</p></div>
-      <div><p>9</p></div>
-      <div><p>10</p></div>
-      <div><p>11</p></div>
-      <div><p>12</p></div>
-    </section>
-    <section class="container-fluid">
-      <div><p>13</p></div>
-      <div><p>14</p></div>
-      <div><p>15</p></div>
-      <div><p>16</p></div>
-      <div><p>17</p></div>
-      <div><p>18</p></div>
-    </section>
   </body>
 </html>

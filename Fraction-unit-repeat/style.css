@@ -1,38 +1,33 @@
-html,body {
-  background: #ffeead;
-}
-div.container > div > p,section.container > div > p,section.container-fluid > div > p {
+div.wrapper > div > p,div.wrapperRepeat > div > p,div.wrapperShorthand > div > p {
   text-align: center;
 }
-div.container > div:nth-child(1n),section.container > div:nth-child(1n),section.container-fluid > div:nth-child(1n) {
+div.wrapper > div:nth-child(1n),div.wrapperRepeat > div:nth-child(1n),div.wrapperShorthand > div:nth-child(1n) {
   background: #96ceb4;
 }
-div.container > div:nth-child(3n),section.container > div:nth-child(3n),section.container-fluid > div:nth-child(3n) {
+div.wrapper > div:nth-child(3n),div.wrapperRepeat > div:nth-child(3n),div.wrapperShorthand > div:nth-child(3n) {
   background: #88d8b0;
 }
-div.container > div:nth-child(2n),section.container > div:nth-child(2n),section.container-fluid > div:nth-child(2n) {
+div.wrapper > div:nth-child(2n),div.wrapperRepeat > div:nth-child(2n),div.wrapperShorthand > div:nth-child(2n) {
   background: #ff6f69;
 }
-div.container > div:nth-child(4n),section.container > div:nth-child(4n),section.container-fluid > div:nth-child(4n) {
+div.wrapper > div:nth-child(4n),div.wrapperRepeat > div:nth-child(4n),div.wrapperShorthand > div:nth-child(4n) {
   background: #ffcc5c;
 }
-div.container {
+div.wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /*The fr unit divide the space in fractional unit, for
   example here our container is divide in 3 columns, so 1fr will take 1 part of the available
   space*/
   grid-gap: 3px;
 }
-section.container {
-  margin-top: 50px;
+div.wrapperRepeat {
   display: grid;
   grid-template-columns: repeat(3,1fr); /*The repeat function is use when you have a lot of
   columns, the first parameter is the number of columns and the second is their width, unit*/
   grid-template-rows: repeat(2,50px);
   grid-gap: 3px;
 }
-section.container-fluid {
-  margin-top: 50px;
+div.wrapperShorthand {
   display: grid;
   grid-template: repeat(2,50px) / repeat(3,1fr); /*grid-template is a shorthand for
   grid-template-columns and grid-template-rows the first instructions define row and the
