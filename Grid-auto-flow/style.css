@@ -1,4 +1,4 @@
-div.container {
+div.wrapper {
   display: grid;
   grid-gap: 5px;
   grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
@@ -8,7 +8,7 @@ div.container {
   will organize the elements by filling each columns. And finally the dense instructions will try to fill
   each whole in our grid so we have an impression of disorder*/
 }
-div.container > div > img {
+div.wrapper > div > img {
   width: 100%;
   height: 100%;
   object-fit: cover;/*The object-fit instruction define how the content must be adapt to his parent*/
