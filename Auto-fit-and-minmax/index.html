@@ -3,36 +3,63 @@
   <head>
     <meta charset="utf-8">
     <title>CSS Grid - Autofit and minmax()</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
-      <div><p>1</p></div>
-      <div><p>2</p></div>
-      <div><p>3</p></div>
-      <div><p>4</p></div>
-      <div><p>5</p></div>
-      <div><p>6</p></div>
-      <div><p>7</p></div>
-      <div><p>8</p></div>
-      <div><p>9</p></div>
-      <div><p>10</p></div>
-      <div><p>11</p></div>
-      <div><p>12</p></div>
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center mt-4 mb-4">Autofit and minmax functions.</h1>
+          <h2 class="mt-4 mb-4">What is autofit ?</h2>
+        </div>
+      </div>
+      <div class="wrapper">
+        <div><p>1</p></div>
+        <div><p>2</p></div>
+        <div><p>3</p></div>
+        <div><p>4</p></div>
+        <div><p>5</p></div>
+        <div><p>6</p></div>
+        <div><p>7</p></div>
+        <div><p>8</p></div>
+        <div><p>9</p></div>
+        <div><p>10</p></div>
+        <div><p>11</p></div>
+        <div><p>12</p></div>
+      </div>
+      <ol class="list-group mt-4 mb-4">
+        <li class="list-group-item">In this first example we will use the <code>autofit</code> function.</li>
+        <li class="list-group-item">In this layout the insctruction is
+        <code>grid-template: repeat(2,150px) / repeat(auto-fit,200px)</code>.</li>
+        <li class="list-group-item">This instructions indicate, create as many as possible columns as long the
+        columns are = 200px auto-fit create a column but if one column is < 200px so auto-fit delete one column,
+        each column can only be = at 200px so sometimes you have white space because there is not enough place
+        for an other column.</li>
+      </ol>
+      <h2 class="mt-4 mb-4">What is minmax ?</h2>
+      <div class="wrapperMinmax">
+        <div><p>13</p></div>
+        <div><p>14</p></div>
+        <div><p>15</p></div>
+        <div><p>16</p></div>
+        <div><p>17</p></div>
+        <div><p>18</p></div>
+        <div><p>19</p></div>
+        <div><p>20</p></div>
+        <div><p>21</p></div>
+        <div><p>22</p></div>
+        <div><p>23</p></div>
+        <div><p>24</p></div>
+      </div>
+      <ol class="list-group mt-4 mb-4">
+        <li class="list-group-item">In this example we will see how works <code>minmax()</code> function.</li>
+        <li class="list-group-item">In this layout the instruction is
+        <code>repeat(2,150px) / repeat(auto-fit,minmax(200px,1fr))</code>.</li>
+        <li class="list-group-item">So <code>minmax()</code> indicate create as many as possible columns with a
+        min-width of 200px and a max-width of 1fr. So if a column is less than 200px delete one column but if a
+        column is more than 200px so take 1fr so take 1 space available in the container.</li>
+      </ol>
     </div>
-    <section class="container">
-      <div><p>13</p></div>
-      <div><p>14</p></div>
-      <div><p>15</p></div>
-      <div><p>16</p></div>
-      <div><p>17</p></div>
-      <div><p>18</p></div>
-      <div><p>19</p></div>
-      <div><p>20</p></div>
-      <div><p>21</p></div>
-      <div><p>22</p></div>
-      <div><p>23</p></div>
-      <div><p>24</p></div>
-    </section>
   </body>
 </html>

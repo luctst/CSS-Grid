@@ -1,22 +1,19 @@
-html,body {
-  background: #ffeead;
-}
-div.container > div > p,section.container > div > p {
+div.wrapper > div > p,section.wrapper > div > p {
   text-align: center;
 }
-div.container > div:nth-child(1n),section.container > div:nth-child(1n) {
+div.wrapper > div:nth-child(1n),div.wrapperMinmax > div:nth-child(1n) {
   background: #96ceb4;
 }
-div.container > div:nth-child(3n),section.container > div:nth-child(3n) {
+div.wrapper > div:nth-child(3n),div.wrapperMinmax > div:nth-child(3n) {
   background: #88d8b0;
 }
-div.container > div:nth-child(2n),section.container > div:nth-child(2n) {
+div.wrapper > div:nth-child(2n),div.wrapperMinmax > div:nth-child(2n) {
   background: #ff6f69;
 }
-div.container > div:nth-child(4n),section.container > div:nth-child(4n) {
+div.wrapper > div:nth-child(4n),div.wrapperMinmax > div:nth-child(4n) {
   background: #ffcc5c;
 }
-div.container {
+div.wrapper {
   display: grid;
   grid-gap: 5px;
   grid-template: repeat(2,150px) / repeat(auto-fit,200px); /*auto-fit create as many as
@@ -24,8 +21,7 @@ div.container {
   one column is < 200px so auto-fit delete one column, each column can only be = at 200px so
   sometimes you have white space because there is not enough place for an other column*/
 }
-section.container {
-  margin-top: 50px;
+div.wrapperMinmax {
   display: grid;
   grid-gap: 5px;
   grid-template: repeat(2,150px) / repeat(auto-fit,minmax(200px,1fr)); /*This instructions says
