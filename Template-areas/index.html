@@ -3,22 +3,46 @@
   <head>
     <meta charset="utf-8">
     <title>CSS Grid - Template areas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
-      <div class="header">
-        <p>header</p>
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center mt-4 mb-4">Positioning with template areas</h1>
+          <h2 class="mt-4 mb-4">Template areas is the second method to positioning items with css grid</h2>
+        </div>
       </div>
-      <div class="menu">
-        <p>menu</p>
+      <div class="wrapper">
+        <div class="header">
+          <p>header</p>
+        </div>
+        <div class="menu">
+          <p>menu</p>
+        </div>
+        <div class="content">
+          <p>content</p>
+        </div>
+        <div class="footer">
+          <p>footer</p>
+        </div>
       </div>
-      <div class="content">
-        <p>content</p>
-      </div>
-      <div class="footer">
-        <p>footer</p>
-      </div>
+      <ol class="list-group mt-4 mb-4">
+        <li class="list-group-item"><code>grid-template-ares</code> alow you to create the layout directly in your
+        css, you should write exactly the same number of columns and lines or it doesn't work.</li>
+        <li class="list-group-item">Once your layout is create on your container you have to create a conexion
+        between the element and the <code>grid-template-areas</code> for this we will use <code>grid-area</code>.</li>
+        <li class="list-group-item">With <code>grid-area</code> we will create a key that we will use in our
+        layout to positioning the element.</li>
+        <li class="list-group-item">Let's see an example, for our header we will use the key <code>h</code>,
+        so in our css it should be <code>grid-area: h</code> by this way the key is create. we must do the same
+        with the key of your choice for all the elements.</li>
+        <li class="list-group-item">Finally our css instructions for this layout will be,
+        <code>". . h h h h h h h h h ."
+        "m c c c c c c c c c c c"
+        ". . f f f f f f f f f ."</code> the <code>.</code> in our code indicate that we want a blank to this place.</li>
+      </ol>
     </div>
   </body>
 </html>
