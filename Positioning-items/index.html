@@ -3,22 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>CSS Grid - Positioning items in a grid with CSS Grid</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
-      <div class="header">
-        <p>header</p>
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center mt-4 mb-4">Positioning items in your grid</h1>
+          <h2 class="mt-4 mb-4">Using grid-column and grid-row</h2>
+        </div>
       </div>
-      <div class="menu">
-        <p>menu</p>
+      <div class="wrapper">
+        <div class="header">
+          <p>header</p>
+        </div>
+        <div class="menu">
+          <p>menu</p>
+        </div>
+        <div class="content">
+          <p>content</p>
+        </div>
+        <div class="footer">
+          <p>footer</p>
+        </div>
       </div>
-      <div class="content">
-        <p>content</p>
-      </div>
-      <div class="footer">
-        <p>footer</p>
-      </div>
+      <ol class="list-group mt-4 mb-4">
+        <li class="list-group-item">Once your grid is create you maybe want to positioning some elements in a
+        diferent order, in css grid it's very easy to move the elements in our grid here is the first solution.</li>
+        <li class="list-group-item">To move our elements we will use <code>grid-column</code> and
+        <code>grid-row</code>.</li>
+        <li class="list-group-item">The method <code>grid-column</code> is a shorthand for
+        <code>grid-column-start</code> and <code>grid-column-end</code> who takes two parameters, the first
+        define where the element should start and the second where he should end on the column line.</li>
+        <li class="list-group-item">It works exactly the same for <code>grid-row</code>.</li>
+        <li class="list-group-item">In our css file it should be for the div.header
+        <code>grid-column: 2 / -1</code> and <code>grid-row: 1 / 2</code>.</li>
+        <li class="list-group-item">Some explanations on the command above, we call our element
+        <code>div.header</code> then we try to place our element after the <code>div.menu</code>
+        so on the column line with <code>grid-column</code> we will indicate <code>2</code> for
+        for the second column and <code>-1</code> who define the last column of our grid this is helpful
+        when you don't know exactly how many columns you have in your grid, it's the same process for
+        <code>grid-row</code>.</li>
+      </ol>
     </div>
   </body>
 </html>
