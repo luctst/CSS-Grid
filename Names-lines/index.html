@@ -3,22 +3,46 @@
   <head>
     <meta charset="utf-8">
     <title>CSS Grid - Named lines</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
-      <div class="header">
-        <p>Header</p>
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center mt-4 mb-4">Give names to your columns and rows</h1>
+          <h2 class="mt-4 mb-4">Names lines</h2>
+        </div>
       </div>
-      <div class="menu">
-        <p>Menu</p>
+      <div class="wrapper">
+        <div class="header">
+          <p>Header</p>
+        </div>
+        <div class="menu">
+          <p>Menu</p>
+        </div>
+        <div class="content">
+          <p>Content</p>
+        </div>
+        <div class="footer">
+          <p>Footer</p>
+        </div>
       </div>
-      <div class="content">
-        <p>Content</p>
-      </div>
-      <div class="footer">
-        <p>Footer</p>
-      </div>
+      <ol class="list-group mt-4 mb-4">
+        <li class="list-group-item">Remember for moving our elements we used <code>grid-column,grid-row</code>
+        and we indicate numbers who define where the elements should start and end. We also saw that we can use
+        <code>grid-template-areas</code> who allow us to create directly the layout in our css. Well there is
+        an other way to place our elements by giving them names.</li>
+        <li class="list-group-item">To do that let's take our layout above, we will use
+        <code>grid-template: 40px 200px 40px / [main-start] 1fr [content-start] 5fr [content-end main-end]</code>.</li>
+        <li class="list-group-item">The instruction above says that we have 3 columns and we give a name, our 1
+        column name is main-start, our 2 columns name is content-start and the 3 column name is content-end and
+        main-end (it's possible to give many names to our columns).</li>
+        <li class="list-group-item">Now that our columns have names how we use this names ? Let's takes the example
+        of our <code>header</code> the code should be <code>grid-column: main-start / main-end</code>
+        we simply replace the number by the name of the column we want, of curse this also works with <code>row</code>.</li>
+        <li class="list-group-item">This methos can be helpful if you have a lot of columns.</li>
+      </ol>
     </div>
   </body>
 </html>
