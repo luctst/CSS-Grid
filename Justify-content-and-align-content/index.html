@@ -3,28 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>CCS Grid - Justify-content and Align-content</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="container">
-      <div>
-        <p>1</p>
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center mt-4 mb-4">Place element</h1>
+          <h2 class="mt-4 mb-4">Using justify-content and align-content</h2>
+        </div>
       </div>
-      <div>
-        <p>2</p>
+      <div class="wrapper">
+        <div>
+          <p>1</p>
+        </div>
+        <div>
+          <p>2</p>
+        </div>
+        <div>
+          <p>3</p>
+        </div>
+        <div>
+          <p>4</p>
+        </div>
+        <div>
+          <p>5</p>
+        </div>
+        <div>
+          <p>6</p>
+        </div>
       </div>
-      <div>
-        <p>3</p>
-      </div>
-      <div>
-        <p>4</p>
-      </div>
-      <div>
-        <p>5</p>
-      </div>
-      <div>
-        <p>6</p>
-      </div>
+      <ol class="list-group mt-4 mb-4">
+        <li class="list-group-item">Once your layout is correctly create you maybe want to positionate child
+        in your elements or maybe your container ? Well you can with <code>justify-content</code> and
+        <code>align-content</code>.</li>
+        <li class="list-group-item">With <code>justify-content</code> you can place your elements on X axis,
+        and with <code>align-content</code> you can place your elements on the Y axis.</li>
+      </ol>
     </div>
   </body>
 </html>

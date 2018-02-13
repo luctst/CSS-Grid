@@ -1,22 +1,19 @@
-  html,body {
-    background: #ffeead;
-  }
-  div.container > div > p {
+div.wrapper > div > p {
     text-align: center;
   }
-  div.container > div:nth-child(1n) {
+div.wrapper > div:nth-child(1n) {
     background: #96ceb4;
   }
-  div.container > div:nth-child(3n) {
+div.wrapper > div:nth-child(3n) {
     background: #88d8b0;
   }
-  div.container > div:nth-child(2n) {
+div.wrapper > div:nth-child(2n) {
     background: #ff6f69;
   }
-  div.container > div:nth-child(4n) {
+div.wrapper > div:nth-child(4n) {
     background: #ffcc5c;
   }
-  div.container {
+div.wrapper {
     border: 2px solid #333;
     display: grid;
     min-height: 100vh;
